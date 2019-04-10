@@ -70,6 +70,12 @@ public class User {
 		this.maxCalorieIntake = maxCalorieIntake;
 	}
 
+	public User(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
+
 	public User(String height, String password, int age, String username, String firstName, String lastName, int id,
 			int maxCalorieIntake, int weight) {
 		super();

@@ -28,6 +28,12 @@ public class UserService {
 		}
 		
 	}
+	public User login(User u) {
+		if(userRepo.findByUsernameIgnoreCaseAndPassword(u.getUsername(), u.getPassword())!=null) {
+			return userRepo.findByUsernameIgnoreCase(u.getUsername());
+			}
+		else {return null;}
+	}
 
 	//pretend this has functionality ....
 }
