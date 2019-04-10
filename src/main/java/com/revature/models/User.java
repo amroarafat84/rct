@@ -69,6 +69,18 @@ public class User {
 		this.height = height;
 		this.maxCalorieIntake = maxCalorieIntake;
 	}
+	
+	public User(String firstName, String lastName, String username, String password, int age, int weight,
+			String height, int maxCalorieIntake) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.username = username;
+		this.password = password;
+		this.age = age;
+		this.weight = weight;
+		this.height = height;
+		this.maxCalorieIntake = maxCalorieIntake;
+	}
 
 	public int getId() {
 		return id;
