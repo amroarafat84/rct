@@ -70,6 +70,33 @@ public class User {
 		this.maxCalorieIntake = maxCalorieIntake;
 	}
 
+	public User(String height, String password, int age, String username, String firstName, String lastName, int id,
+			int maxCalorieIntake, int weight) {
+		super();
+		this.height = height;
+		this.password = password;
+		this.age = age;
+		this.username = username;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.id = id;
+		this.maxCalorieIntake = maxCalorieIntake;
+		this.weight = weight;
+	}
+
+	public User(String height, String password, int age, String username, String firstName, String lastName,
+			int maxCalorieIntake, int weight) {
+		super();
+		this.height = height;
+		this.password = password;
+		this.age = age;
+		this.username = username;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.maxCalorieIntake = maxCalorieIntake;
+		this.weight = weight;
+	}
+
 	public int getId() {
 		return id;
 	}
