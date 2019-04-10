@@ -1,5 +1,33 @@
 package com.revature.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.revature.models.User;
+import com.revature.repositories.UserRepository;
+
+@Service
+@Transactional
 public class UserService {
 
+	@Autowired
+	private UserRepository userRepo;
+	
+	
+	public User addUser(User u) {
+		if(u.getUsername() == null || u.getPassword() == null) {
+			return null;
+		}
+		else if(userRepo.findByUsernameIgnoreCase(u.getUsername())!= null) {
+			//username already exists
+			return null;
+		}
+		else {
+			return userRepo.save(u);
+		}
+		
+	}
+
+	//pretend this has functionality ....
 }

@@ -18,7 +18,7 @@
 
 <tx:annotation-driven/>
 
-<jpa:repositories base-package="com.revature.data"></jpa:repositories>
+<jpa:repositories base-package="com.revature.repositories"></jpa:repositories>
 
 <aop:aspectj-autoproxy/>
 
