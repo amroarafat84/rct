@@ -13,11 +13,14 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+/*
 @Component
 @Entity
 @Table(name="USER_RECIPE_HISTORY")
+*/
 public class UserRecipeHistory {
 	
+	/*
 	@Id
 	@Column(name="USER_RECIPE_HISTORY_ID")
 	@GeneratedValue(generator="USER_RECIPE_HISTORY_SEQ_GEN", strategy=GenerationType.SEQUENCE)
@@ -80,4 +83,5 @@ public class UserRecipeHistory {
 	public String toString() {
 		return "UserRecipeHistory [id=" + id + ", user=" + user + ", recipe=" + recipe + ", date=" + date + "]";
 	}
+	*/
 }
