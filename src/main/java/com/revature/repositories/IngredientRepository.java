@@ -12,5 +12,5 @@ public interface IngredientRepository extends JpaRepository<Ingredient, Integer>
 	
 	Ingredient findById(int id);
 	
-	Ingredient findByNdbno(int ndbno);
+	Ingredient findByNdbno(String ndbno);
 }
