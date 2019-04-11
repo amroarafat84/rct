@@ -26,7 +26,7 @@ public class UserController {
 	//ADD USER
 	@RequestMapping(value="/register",
 			method=RequestMethod.POST, 
-			consumes=MediaType.APPLICATION_JSON_VALUE,
+			consumes=MediaType.APPLICATION_JSON_VALUE, 
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<User> add(@RequestBody User user){
 		user = uService.addUser(user);
