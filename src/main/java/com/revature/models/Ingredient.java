@@ -24,17 +24,22 @@ public class Ingredient {
 	@Column(name="INGREDIENT_NAME", nullable=false)
 	private String ingredientName;
 	
+	@Column(name="INGREDIENT_NDBNO", nullable=false)
+	private int ndbno;
+	
 	public Ingredient() { }
 
-	public Ingredient(String ingredientName) {
+	public Ingredient(String ingredientName, int ndbno) {
 		super();
 		this.ingredientName = ingredientName;
+		this.ndbno = ndbno;
 	}
 
-	public Ingredient(int id, String ingredientName) {
+	public Ingredient(int id, String ingredientName, int ndbno) {
 		super();
 		this.id = id;
 		this.ingredientName = ingredientName;
+		this.ndbno = ndbno;
 	}
 
 	public int getId() {
@@ -43,6 +48,14 @@ public class Ingredient {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public int getNdbno() {
+		return ndbno;
+	}
+
+	public void setNdbno(int ndbno) {
+		this.ndbno = ndbno;
 	}
 
 	public String getIngredientName() {
@@ -55,6 +68,6 @@ public class Ingredient {
 
 	@Override
 	public String toString() {
-		return "Ingredient [id=" + id + ", ingredientName=" + ingredientName + "]";
+		return "Ingredient [id=" + id + ", ingredientName=" + ingredientName + ", ndbno=" + ndbno + "]";
 	}
 }
