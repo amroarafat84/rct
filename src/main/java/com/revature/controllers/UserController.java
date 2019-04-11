@@ -36,7 +36,7 @@ public class UserController {
 	public ResponseEntity<User> log(@RequestBody User user){
 		user=uService.login(user);
 		if(user!=null) {
-		return new ResponseEntity<User>(user, HttpStatus.I_AM_A_TEAPOT);}
+		return new ResponseEntity<User>(user, HttpStatus.OK);}
 		else {return new ResponseEntity<User>(HttpStatus.NO_CONTENT);}
 	}
 }
