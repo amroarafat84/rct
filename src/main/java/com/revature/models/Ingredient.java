@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-@Table(name="INGREDIENT")
+@Table(name="INGREDIENTS")
 public class Ingredient {
 	
 	@Id
@@ -24,18 +24,18 @@ public class Ingredient {
 	@Column(name="INGREDIENT_NAME", nullable=false)
 	private String ingredientName;
 	
-	@Column(name="INGREDIENT_NDBNO", nullable=false)
-	private int ndbno;
+	@Column(name="NDBNO", nullable=false)
+	private String ndbno;
 	
 	public Ingredient() { }
 
-	public Ingredient(String ingredientName, int ndbno) {
+	public Ingredient(String ingredientName, String ndbno) {
 		super();
 		this.ingredientName = ingredientName;
 		this.ndbno = ndbno;
 	}
 
-	public Ingredient(int id, String ingredientName, int ndbno) {
+	public Ingredient(int id, String ingredientName, String ndbno) {
 		super();
 		this.id = id;
 		this.ingredientName = ingredientName;
@@ -50,11 +50,11 @@ public class Ingredient {
 		this.id = id;
 	}
 	
-	public int getNdbno() {
+	public String getNdbno() {
 		return ndbno;
 	}
 
-	public void setNdbno(int ndbno) {
+	public void setNdbno(String ndbno) {
 		this.ndbno = ndbno;
 	}
 
