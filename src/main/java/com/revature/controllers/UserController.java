@@ -23,7 +23,7 @@ public class UserController {
 	UserService uService; //SHOULD BE SERVICE LAYER to follow best practices
 	
 	
-	//ADD USER
+	//ADD USER 
 	@RequestMapping(value="/register",
 			method=RequestMethod.POST, 
 			consumes=MediaType.APPLICATION_JSON_VALUE, 
