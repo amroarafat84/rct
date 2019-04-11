@@ -28,12 +28,15 @@ public class UserService {
 		}
 		
 	}
+	
 	public User login(User u) {
 		if(userRepo.findByUsernameIgnoreCaseAndPassword(u.getUsername(), u.getPassword())!=null) {
 			return userRepo.findByUsernameIgnoreCase(u.getUsername());
 			}
 		else {return null;}
 	}
+	public User editcalories(User u) {
+		return u;
+	}
 
-	//pretend this has functionality ....
 }
